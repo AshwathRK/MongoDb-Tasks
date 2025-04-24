@@ -1,0 +1,766 @@
+// 1. Create new DataBase
+
+use zen_class_programme;
+
+// 2. Create the users, codeKata, attendance, topics, tasks, companyDrives, and mentors Collections
+
+db.createCollection("users");
+db.createCollection("codeKata");
+db.createCollection("attendance");
+db.createCollection("topics");
+db.createCollection("tasks");
+db.createCollection("companyDrives");
+db.createCollection("mentors");
+
+//3. Insert the values from the users collection
+db.users.insetMany(
+    [
+  {"name": "Kiran Singh", "userId": "BT_US_001", "batchCode": "BT_WE_F_004"},
+  {"name": "Vikram Iyer", "userId": "BT_US_002", "batchCode": "BT_WE_F_003"},
+  {"name": "Arjun Sharma", "userId": "BT_US_003", "batchCode": "BT_WE_F_004"},
+  {"name": "Ravi Patel", "userId": "BT_US_004", "batchCode": "BT_WE_F_005"},
+  {"name": "Sneha Nair", "userId": "BT_US_005", "batchCode": "BT_WE_F_005"},
+  {"name": "Meera Sharma", "userId": "BT_US_006", "batchCode": "BT_WE_F_004"},
+  {"name": "Arjun Gupta", "userId": "BT_US_007", "batchCode": "BT_WE_F_002"},
+  {"name": "Nisha Chopra", "userId": "BT_US_008", "batchCode": "BT_WE_F_001"},
+  {"name": "Rahul Patel", "userId": "BT_US_009", "batchCode": "BT_WE_F_003"},
+  {"name": "Nisha Patel", "userId": "BT_US_010", "batchCode": "BT_WE_F_001"},
+  {"name": "Meera Verma", "userId": "BT_US_011", "batchCode": "BT_WE_F_003"},
+  {"name": "Nisha Iyer", "userId": "BT_US_012", "batchCode": "BT_WE_F_004"},
+  {"name": "Rahul Sharma", "userId": "BT_US_013", "batchCode": "BT_WE_F_001"},
+  {"name": "Sneha Nair", "userId": "BT_US_014", "batchCode": "BT_WE_F_005"},
+  {"name": "Ashwat Iyer", "userId": "BT_US_015", "batchCode": "BT_WE_F_004"},
+  {"name": "Vikram Verma", "userId": "BT_US_016", "batchCode": "BT_WE_F_004"},
+  {"name": "Kiran Verma", "userId": "BT_US_017", "batchCode": "BT_WE_F_002"},
+  {"name": "Sneha Iyer", "userId": "BT_US_018", "batchCode": "BT_WE_F_004"},
+  {"name": "Rahul Reddy", "userId": "BT_US_019", "batchCode": "BT_WE_F_003"},
+  {"name": "Ashwat Nair", "userId": "BT_US_020", "batchCode": "BT_WE_F_003"},
+  {"name": "Sneha Das", "userId": "BT_US_021", "batchCode": "BT_WE_F_003"},
+  {"name": "Meera Iyer", "userId": "BT_US_022", "batchCode": "BT_WE_F_003"},
+  {"name": "Vikram Iyer", "userId": "BT_US_023", "batchCode": "BT_WE_F_002"},
+  {"name": "Meera Nair", "userId": "BT_US_024", "batchCode": "BT_WE_F_005"},
+  {"name": "Ashwat Nair", "userId": "BT_US_025", "batchCode": "BT_WE_F_003"},
+  {"name": "Rahul Reddy", "userId": "BT_US_026", "batchCode": "BT_WE_F_005"},
+  {"name": "Kiran Singh", "userId": "BT_US_027", "batchCode": "BT_WE_F_004"},
+  {"name": "Ravi Gupta", "userId": "BT_US_028", "batchCode": "BT_WE_F_003"},
+  {"name": "Ravi Reddy", "userId": "BT_US_029", "batchCode": "BT_WE_F_005"},
+  {"name": "Nisha Reddy", "userId": "BT_US_030", "batchCode": "BT_WE_F_004"},
+  {"name": "Ravi Gupta", "userId": "BT_US_031", "batchCode": "BT_WE_F_002"},
+  {"name": "Kiran Patel", "userId": "BT_US_032", "batchCode": "BT_WE_F_004"},
+  {"name": "Kiran Sharma", "userId": "BT_US_033", "batchCode": "BT_WE_F_004"},
+  {"name": "Ashwat Gupta", "userId": "BT_US_034", "batchCode": "BT_WE_F_002"},
+  {"name": "Ashwat Reddy", "userId": "BT_US_035", "batchCode": "BT_WE_F_002"},
+  {"name": "Vikram Iyer", "userId": "BT_US_036", "batchCode": "BT_WE_F_004"},
+  {"name": "Pooja Sharma", "userId": "BT_US_037", "batchCode": "BT_WE_F_004"},
+  {"name": "Ashwat Iyer", "userId": "BT_US_038", "batchCode": "BT_WE_F_004"},
+  {"name": "Nisha Sharma", "userId": "BT_US_039", "batchCode": "BT_WE_F_003"},
+  {"name": "Pooja Iyer", "userId": "BT_US_040", "batchCode": "BT_WE_F_001"},
+  {"name": "Ashwat Sharma", "userId": "BT_US_041", "batchCode": "BT_WE_F_003"},
+  {"name": "Rahul Singh", "userId": "BT_US_042", "batchCode": "BT_WE_F_002"},
+  {"name": "Arjun Singh", "userId": "BT_US_043", "batchCode": "BT_WE_F_003"},
+  {"name": "Sneha Iyer", "userId": "BT_US_044", "batchCode": "BT_WE_F_003"},
+  {"name": "Arjun Das", "userId": "BT_US_045", "batchCode": "BT_WE_F_001"},
+  {"name": "Arjun Patel", "userId": "BT_US_046", "batchCode": "BT_WE_F_002"},
+  {"name": "Vikram Gupta", "userId": "BT_US_047", "batchCode": "BT_WE_F_002"},
+  {"name": "Vikram Verma", "userId": "BT_US_048", "batchCode": "BT_WE_F_005"},
+  {"name": "Vikram Iyer", "userId": "BT_US_049", "batchCode": "BT_WE_F_001"},
+  {"name": "Vikram Das", "userId": "BT_US_050", "batchCode": "BT_WE_F_005"}
+])
+
+// 4. Find the all details in the users collection 
+
+db.users.find()
+
+// 5. Insert the data from the codeKata collection
+db.codeKata.insetMany([
+
+ { problem: "FizzBuzz", isSolved: true },
+ { problem: "Factorial Calculation", isSolved: true },
+ { problem: "Find Prime Numbers", isSolved: false },
+ { problem: "Fibonacci Sequence", isSolved: true },
+ { problem: "Anagram Check", isSolved: false },
+ { problem: "Find Duplicates", isSolved: true },
+ { problem: "Remove Duplicates", isSolved: true },
+ { problem: "Binary Search", isSolved: false },
+ { problem: "Linear Search", isSolved: true },
+ { problem: "Bubble Sort", isSolved: true },
+ { problem: "Selection Sort", isSolved: false },
+ { problem: "Insertion Sort", isSolved: true },
+ { problem: "Merge Sort", isSolved: false },
+ { problem: "Quick Sort", isSolved: false },
+ { problem: "Reverse Linked List", isSolved: false },
+ { problem: "Find Middle of Linked List", isSolved: true },
+ { problem: "Detect Cycle in Linked List", isSolved: false },
+ { problem: "Two Sum", isSolved: true },
+ { problem: "Longest Common Prefix", isSolved: false },
+ { problem: "Valid Parentheses", isSolved: true },
+ { problem: "Balanced Brackets", isSolved: true },
+ { problem: "Roman to Integer", isSolved: false },
+ { problem: "Integer to Roman", isSolved: false },
+ { problem: "Climbing Stairs", isSolved: true },
+ { problem: "House Robber", isSolved: false },
+ { problem: "Max Subarray", isSolved: true },
+ { problem: "Best Time to Buy and Sell Stock", isSolved: true },
+ { problem: "Valid Palindrome", isSolved: false },
+ { problem: "Longest Palindromic Substring", isSolved: false },
+ { problem: "Count Vowels", isSolved: true },
+ { problem: "String Compression", isSolved: false },
+ { problem: "Power of Two", isSolved: true },
+ { problem: "Find Missing Number", isSolved: true },
+ { problem: "Find Single Number", isSolved: false },
+ { problem: "First Unique Character", isSolved: false },
+ { problem: "Majority Element", isSolved: true },
+ { problem: "Move Zeroes", isSolved: true },
+ { problem: "Merge Two Sorted Lists", isSolved: true },
+ { problem: "Remove Nth Node From End", isSolved: false },
+ { problem: "Add Two Numbers", isSolved: false },
+ { problem: "Valid Anagram", isSolved: true },
+ { problem: "Group Anagrams", isSolved: false },
+ { problem: "Top K Frequent Elements", isSolved: false },
+ { problem: "Longest Consecutive Sequence", isSolved: false },
+ { problem: "Rotate Array", isSolved: true },
+ { problem: "Contains Duplicate", isSolved: true },
+ { problem: "Product of Array Except Self", isSolved: false },
+ { problem: "Set Matrix Zeroes", isSolved: false },
+ { problem: "Spiral Matrix", isSolved: false },
+ { problem: "Pascal's Triangle", isSolved: true },
+ { problem: "Minimum in Rotated Sorted Array", isSolved: false },
+ { problem: "Search in Rotated Sorted Array", isSolved: false },
+ { problem: "Kth Largest Element", isSolved: false },
+ { problem: "Valid Sudoku", isSolved: false },
+ { problem: "Sudoku Solver", isSolved: false },
+ { problem: "N-Queens Problem", isSolved: false },
+ { problem: "Permutations", isSolved: false },
+ { problem: "Generate Parentheses", isSolved: false },
+ { problem: "Palindrome Check", isSolved: false }
+])
+
+
+// insert the value for the attendance collection
+
+db.attendance.insetMany(
+    [
+  {
+    "userName": "Nisha Reddy",
+    "isPresent": false,
+    "classDate": "2020-08-17"
+  },
+  {
+    "userName": "Kiran Singh",
+    "isPresent": false,
+    "classDate": "2020-08-27"
+  },
+  {
+    "userName": "Meera Nair",
+    "isPresent": true,
+    "classDate": "2020-10-19"
+  },
+  {
+    "userName": "Vikram Iyer",
+    "isPresent": false,
+    "classDate": "2020-08-21"
+  },
+  {
+    "userName": "Ashwat Sharma",
+    "isPresent": true,
+    "classDate": "2020-10-24"
+  },
+  {
+    "userName": "Ashwat Nair",
+    "isPresent": true,
+    "classDate": "2020-10-05"
+  },
+  {
+    "userName": "Ashwat Iyer",
+    "isPresent": false,
+    "classDate": "2020-09-10"
+  },
+  {
+    "userName": "Ashwat Gupta",
+    "isPresent": true,
+    "classDate": "2020-09-09"
+  },
+  {
+    "userName": "Ashwat Sharma",
+    "isPresent": false,
+    "classDate": "2020-09-30"
+  },
+  {
+    "userName": "Vikram Iyer",
+    "isPresent": false,
+    "classDate": "2020-09-07"
+  },
+  {
+    "userName": "Nisha Iyer",
+    "isPresent": true,
+    "classDate": "2020-09-13"
+  },
+  {
+    "userName": "Ashwat Nair",
+    "isPresent": true,
+    "classDate": "2020-10-24"
+  },
+  {
+    "userName": "Rahul Sharma",
+    "isPresent": false,
+    "classDate": "2020-10-24"
+  },
+  {
+    "userName": "Ravi Gupta",
+    "isPresent": false,
+    "classDate": "2020-10-26"
+  },
+  {
+    "userName": "Nisha Reddy",
+    "isPresent": false,
+    "classDate": "2020-08-23"
+  },
+  {
+    "userName": "Vikram Iyer",
+    "isPresent": true,
+    "classDate": "2020-10-25"
+  },
+  {
+    "userName": "Sneha Nair",
+    "isPresent": true,
+    "classDate": "2020-08-20"
+  },
+  {
+    "userName": "Meera Iyer",
+    "isPresent": false,
+    "classDate": "2020-09-24"
+  },
+  {
+    "userName": "Arjun Sharma",
+    "isPresent": true,
+    "classDate": "2020-09-13"
+  },
+  {
+    "userName": "Nisha Sharma",
+    "isPresent": false,
+    "classDate": "2020-09-17"
+  },
+  {
+    "userName": "Vikram Iyer",
+    "isPresent": false,
+    "classDate": "2020-10-13"
+  },
+  {
+    "userName": "Arjun Gupta",
+    "isPresent": true,
+    "classDate": "2020-10-11"
+  },
+  {
+    "userName": "Rahul Sharma",
+    "isPresent": false,
+    "classDate": "2020-10-14"
+  },
+  {
+    "userName": "Meera Nair",
+    "isPresent": false,
+    "classDate": "2020-08-29"
+  },
+  {
+    "userName": "Meera Sharma",
+    "isPresent": true,
+    "classDate": "2020-08-19"
+  },
+  {
+    "userName": "Meera Nair",
+    "isPresent": false,
+    "classDate": "2020-10-20"
+  },
+  {
+    "userName": "Pooja Sharma",
+    "isPresent": true,
+    "classDate": "2020-10-25"
+  },
+  {
+    "userName": "Vikram Iyer",
+    "isPresent": false,
+    "classDate": "2020-10-31"
+  },
+  {
+    "userName": "Vikram Gupta",
+    "isPresent": true,
+    "classDate": "2020-08-23"
+  },
+  {
+    "userName": "Arjun Das",
+    "isPresent": true,
+    "classDate": "2020-10-02"
+  },
+  {
+    "userName": "Kiran Verma",
+    "isPresent": false,
+    "classDate": "2020-10-30"
+  },
+  {
+    "userName": "Vikram Iyer",
+    "isPresent": true,
+    "classDate": "2020-08-23"
+  },
+  {
+    "userName": "Vikram Iyer",
+    "isPresent": true,
+    "classDate": "2020-09-06"
+  },
+  {
+    "userName": "Kiran Singh",
+    "isPresent": true,
+    "classDate": "2020-09-15"
+  },
+  {
+    "userName": "Kiran Verma",
+    "isPresent": false,
+    "classDate": "2020-09-25"
+  },
+  {
+    "userName": "Pooja Iyer",
+    "isPresent": false,
+    "classDate": "2020-10-31"
+  },
+  {
+    "userName": "Nisha Sharma",
+    "isPresent": false,
+    "classDate": "2020-10-16"
+  },
+  {
+    "userName": "Arjun Singh",
+    "isPresent": true,
+    "classDate": "2020-10-02"
+  },
+  {
+    "userName": "Sneha Iyer",
+    "isPresent": false,
+    "classDate": "2020-08-17"
+  },
+  {
+    "userName": "Ashwat Nair",
+    "isPresent": true,
+    "classDate": "2020-10-05"
+  },
+  {
+    "userName": "Ashwat Gupta",
+    "isPresent": false,
+    "classDate": "2020-09-01"
+  },
+  {
+    "userName": "Kiran Sharma",
+    "isPresent": false,
+    "classDate": "2020-08-15"
+  },
+  {
+    "userName": "Nisha Sharma",
+    "isPresent": false,
+    "classDate": "2020-10-04"
+  },
+  {
+    "userName": "Ashwat Gupta",
+    "isPresent": true,
+    "classDate": "2020-08-24"
+  },
+  {
+    "userName": "Vikram Iyer",
+    "isPresent": false,
+    "classDate": "2020-09-23"
+  },
+  {
+    "userName": "Ravi Patel",
+    "isPresent": false,
+    "classDate": "2020-10-10"
+  },
+  {
+    "userName": "Nisha Reddy",
+    "isPresent": true,
+    "classDate": "2020-10-10"
+  },
+  {
+    "userName": "Arjun Singh",
+    "isPresent": false,
+    "classDate": "2020-09-01"
+  },
+  {
+    "userName": "Kiran Verma",
+    "isPresent": true,
+    "classDate": "2020-10-07"
+  },
+  {
+    "userName": "Sneha Iyer",
+    "isPresent": false,
+    "classDate": "2020-08-16"
+  },
+  {
+    "userName": "Arjun Gupta",
+    "isPresent": false,
+    "classDate": "2020-09-30"
+  },
+  {
+    "userName": "Arjun Singh",
+    "isPresent": true,
+    "classDate": "2020-08-25"
+  },
+  {
+    "userName": "Nisha Chopra",
+    "isPresent": true,
+    "classDate": "2020-10-22"
+  },
+  {
+    "userName": "Ashwat Iyer",
+    "isPresent": false,
+    "classDate": "2020-09-05"
+  },
+  {
+    "userName": "Nisha Reddy",
+    "isPresent": true,
+    "classDate": "2020-08-26"
+  },
+  {
+    "userName": "Pooja Iyer",
+    "isPresent": true,
+    "classDate": "2020-08-24"
+  },
+  {
+    "userName": "Ashwat Iyer",
+    "isPresent": false,
+    "classDate": "2020-08-24"
+  },
+  {
+    "userName": "Vikram Gupta",
+    "isPresent": true,
+    "classDate": "2020-09-10"
+  },
+  {
+    "userName": "Rahul Reddy",
+    "isPresent": false,
+    "classDate": "2020-10-20"
+  },
+  {
+    "userName": "Ravi Gupta",
+    "isPresent": false,
+    "classDate": "2020-09-27"
+  }
+]
+)
+
+
+// Insert the document for the topics 
+
+db.topics.insetMany(
+    [
+  {
+    "title": "HTML Day 1 - Introduction to HTML",
+    "startDate": "2020-08-17"
+  },
+  {
+    "title": "HTML Day 2 - HTML Elements and Structure",
+    "startDate": "2020-08-19"
+  },
+  {
+    "title": "HTML Day 3 - Formatting and Semantics",
+    "startDate": "2020-08-21"
+  },
+  {
+    "title": "CSS Day 1 - Introduction to CSS",
+    "startDate": "2020-08-24"
+  },
+  {
+    "title": "CSS Day 2 - Selectors and Properties",
+    "startDate": "2020-08-26"
+  },
+  {
+    "title": "CSS Day 3 - Box Model and Layouts",
+    "startDate": "2020-08-28"
+  },
+  {
+    "title": "CSS Day 4 - Flexbox and Grid",
+    "startDate": "2020-09-01"
+  },
+  {
+    "title": "JavaScript Day 1 - Introduction to JS",
+    "startDate": "2020-09-04"
+  },
+  {
+    "title": "JavaScript Day 2 - Variables and Data Types",
+    "startDate": "2020-09-07"
+  },
+  {
+    "title": "JavaScript Day 3 - Functions and Scope",
+    "startDate": "2020-09-09"
+  },
+  {
+    "title": "JavaScript Day 4 - Events and DOM Manipulation",
+    "startDate": "2020-09-11"
+  },
+  {
+    "title": "JavaScript Day 5 - Arrays and Loops",
+    "startDate": "2020-09-14"
+  },
+  {
+    "title": "React Day 1 - Getting Started with React",
+    "startDate": "2020-09-17"
+  },
+  {
+    "title": "React Day 2 - Components and Props",
+    "startDate": "2020-09-20"
+  },
+  {
+    "title": "React Day 3 - State and Lifecycle",
+    "startDate": "2020-09-23"
+  },
+  {
+    "title": "React Day 4 - Handling Events",
+    "startDate": "2020-09-26"
+  },
+  {
+    "title": "React Day 5 - Conditional Rendering",
+    "startDate": "2020-09-30"
+  },
+  {
+    "title": "React Day 6 - Lists and Keys",
+    "startDate": "2020-10-04"
+  },
+  {
+    "title": "React Day 7 - Forms in React",
+    "startDate": "2020-10-08"
+  },
+  {
+    "title": "React Day 8 - Lifting State Up",
+    "startDate": "2020-10-12"
+  },
+  {
+    "title": "React Day 9 - React Hooks Introduction",
+    "startDate": "2020-10-16"
+  },
+  {
+    "title": "React Day 10 - Final Project and Review",
+    "startDate": "2020-10-20"
+  }
+]
+)
+
+//Insert the documents in the company drive collection
+
+db.companyDrives.insetMany(
+    [
+  {
+    "companyName": "Infosys",
+    "driveDate": "2020-08-18",
+    "attendedStudents": ["Anjali", "Ravi", "Kiran"]
+  },
+  {
+    "companyName": "TCS",
+    "driveDate": "2020-08-20",
+    "attendedStudents": ["Deepa", "Suresh", "Megha"]
+  },
+  {
+    "companyName": "Wipro",
+    "driveDate": "2020-08-25",
+    "attendedStudents": ["Ankit", "Divya", "Harsha"]
+  },
+  {
+    "companyName": "Cognizant",
+    "driveDate": "2020-08-28",
+    "attendedStudents": ["Kavya", "Neeraj", "Sunil"]
+  },
+  {
+    "companyName": "Capgemini",
+    "driveDate": "2020-09-01",
+    "attendedStudents": ["Lakshmi", "Amit", "Reshma"]
+  },
+  {
+    "companyName": "Tech Mahindra",
+    "driveDate": "2020-09-04",
+    "attendedStudents": ["Rahul", "Pooja", "Naveen"]
+  },
+  {
+    "companyName": "HCL Technologies",
+    "driveDate": "2020-09-07",
+    "attendedStudents": ["Sneha", "Arjun", "Vikram"]
+  },
+  {
+    "companyName": "IBM",
+    "driveDate": "2020-09-10",
+    "attendedStudents": ["Maya", "Karthik", "Rohit"]
+  },
+  {
+    "companyName": "Accenture",
+    "driveDate": "2020-09-13",
+    "attendedStudents": ["Sanjana", "Manoj", "Vani"]
+  },
+  {
+    "companyName": "L&T Infotech",
+    "driveDate": "2020-09-17",
+    "attendedStudents": ["Girish", "Ayesha", "Tejas"]
+  },
+  {
+    "companyName": "Zoho",
+    "driveDate": "2020-09-21",
+    "attendedStudents": ["Chaitanya", "Neha", "Yash"]
+  },
+  {
+    "companyName": "Oracle",
+    "driveDate": "2020-09-25",
+    "attendedStudents": ["Ritu", "Sandeep", "Keerthi"]
+  },
+  {
+    "companyName": "Google",
+    "driveDate": "2020-09-29",
+    "attendedStudents": ["Vinay", "Aarav", "Ishita"]
+  },
+  {
+    "companyName": "Microsoft",
+    "driveDate": "2020-10-03",
+    "attendedStudents": ["Aditya", "Snehal", "Raj"]
+  },
+  {
+    "companyName": "Amazon",
+    "driveDate": "2020-10-07",
+    "attendedStudents": ["Priya", "Dev", "Harini"]
+  },
+  {
+    "companyName": "Flipkart",
+    "driveDate": "2020-10-10",
+    "attendedStudents": ["Ramesh", "Lavanya", "Sameer"]
+  },
+  {
+    "companyName": "Mindtree",
+    "driveDate": "2020-10-14",
+    "attendedStudents": ["Nikhil", "Bhavya", "Tarun"]
+  },
+  {
+    "companyName": "Deloitte",
+    "driveDate": "2020-10-18",
+    "attendedStudents": ["Varsha", "Kunal", "Aishwarya"]
+  },
+  {
+    "companyName": "Qualcomm",
+    "driveDate": "2020-10-23",
+    "attendedStudents": ["Ritika", "Abhishek", "Nandini"]
+  },
+  {
+    "companyName": "Intel",
+    "driveDate": "2020-10-28",
+    "attendedStudents": ["Jay", "Meena", "Suraj"]
+  }
+]
+)
+
+// Insert the document for the Mentors collection
+
+db.mentors.insetMany(
+    [
+  {
+    "name": "Anita Sharma",
+    "students": ["Ravi", "Neha", "Kiran", "Megha", "Suresh", "Vikram", "Ayesha", "Gaurav", "Kavya", "Nikhil", "Bhavya", "Tejas"]
+  },
+  {
+    "name": "Sandeep Verma",
+    "students": ["Aditya", "Sneha", "Rahul", "Lakshmi", "Yash", "Harsha", "Aarav", "Ishita", "Maya", "Rohit"]
+  },
+  {
+    "name": "Priya Iyer",
+    "students": ["Karthik", "Divya", "Reshma", "Raj", "Vinay", "Ritu", "Deepa", "Manoj", "Chaitanya", "Lavanya", "Sunil", "Tarun"]
+  },
+  {
+    "name": "Rohit Kulkarni",
+    "students": ["Vani", "Arjun", "Anjali", "Ramesh", "Abhishek", "Jay", "Keerthi", "Nandini", "Meena", "Girish", "Sameer"]
+  },
+  {
+    "name": "Neelam Reddy",
+    "students": ["Dev", "Varsha", "Kunal", "Pooja", "Snehal", "Harini", "Amit", "Sanjana", "Ritika", "Naveen", "Suraj"]
+  },
+  {
+    "name": "Rajeev Singh",
+    "students": ["Chaitanya", "Yash", "Kavya", "Vikram", "Bhavya", "Priya", "Tejas", "Aishwarya", "Neeraj", "Maya"]
+  },
+  {
+    "name": "Meena Joseph",
+    "students": ["Aarav", "Lakshmi", "Karthik", "Ishita", "Ravi", "Gaurav", "Kiran", "Neha", "Ankit", "Lavanya", "Rohit", "Tarun", "Megha"]
+  },
+  {
+    "name": "Arvind Das",
+    "students": ["Vinay", "Dev", "Suresh", "Sunil", "Raj", "Rahul", "Kunal", "Amit", "Varsha", "Ritika"]
+  },
+  {
+    "name": "Divya Nair",
+    "students": ["Sneha", "Chaitanya", "Harsha", "Reshma", "Neeraj", "Bhavya", "Ramesh", "Anjali", "Tarun", "Yash", "Abhishek", "Meena", "Kiran"]
+  },
+  {
+    "name": "Tarun Bhatia",
+    "students": ["Aditya", "Deepa", "Sanjana", "Vani", "Manoj", "Ayesha", "Nikhil", "Girish", "Lavanya", "Sameer", "Nandini", "Suraj"]
+  }
+]
+)
+
+
+// Inset the data from the tasks collection
+
+db.tasks.insetMany(
+    [
+  {
+    "title": "HTML Task - Create a Personal Webpage",
+    "assignedDate": "2020-08-17",
+    "submittedDate": "2020-08-19"
+  },
+  {
+    "title": "CSS Task - Style the Webpage with Flexbox",
+    "assignedDate": "2020-08-22",
+    "submittedDate": "2020-08-24"
+  },
+  {
+    "title": "JavaScript Task - Simple Calculator",
+    "assignedDate": "2020-08-29",
+    "submittedDate": "2020-09-01"
+  },
+  {
+    "title": "HTML Task - Create a Form Page",
+    "assignedDate": "2020-09-05",
+    "submittedDate": "2020-09-07"
+  },
+  {
+    "title": "CSS Task - Responsive Layout with Grid",
+    "assignedDate": "2020-09-11",
+    "submittedDate": "2020-09-13"
+  },
+  {
+    "title": "JavaScript Task - DOM Manipulation",
+    "assignedDate": "2020-09-18",
+    "submittedDate": "2020-09-20"
+  },
+  {
+    "title": "React Task - Build a Todo App",
+    "assignedDate": "2020-09-25",
+    "submittedDate": "2020-09-28"
+  },
+  {
+    "title": "React Task - Create Components and Props Demo",
+    "assignedDate": "2020-10-02",
+    "submittedDate": "2020-10-05"
+  },
+  {
+    "title": "JavaScript Task - Fetch API and Display Data",
+    "assignedDate": "2020-10-10",
+    "submittedDate": "2020-10-12"
+  },
+  {
+    "title": "React Task - UseState and Event Handling",
+    "assignedDate": "2020-10-20",
+    "submittedDate": "2020-10-23"
+  }
+]
+)
+
+
+// Question Number: 1
+// Find all the topics and tasks which are thought in the month of October
+
+    db.topics.find({startDate:{$lte: '2020-10-31', $gte: '2020-10-01'}})
+    db.tasks.find({assignedDate:{$lte: '2020-10-31', $gte: '2020-10-01'}})
+
+// Question Number: 2
+//Find all the company drives which appeared between 15 oct-2020 and 31-oct-2020
+    db.companyDrives.find({driveDate:{$lte: '2020-10-31', $gte: '2020-10-15'}})
+
+// Question Number: 3
+//Find all the company drives and students who are appeared for the placement.
