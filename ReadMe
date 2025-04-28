@@ -133,7 +133,7 @@ db.codeKata.insetMany([
  { problem: "Permutations", isSolved: false },
  { problem: "Generate Parentheses", isSolved: false },
  { problem: "Palindrome Check", isSolved: false }
-])
+]);
 
 
 // insert the value for the attendance collection
@@ -764,3 +764,30 @@ db.tasks.insetMany(
 
 // Question Number: 3
 //Find all the company drives and students who are appeared for the placement.
+    db.companyDrives.find({attendedStudents:{$exists:true}})
+
+// Question Number: 4
+//Find the number of problems solved by the user in codekata
+    db.codeKata.find({isSolved:true}).count()
+
+// Question Number: 5
+//Find all the mentors with who has the mentee's count more than 15
+db.mentors.aggregate([
+  {
+    $project: {
+      name: 1,
+      studentCount: { $size: "$students" }
+    }
+  },
+  {
+    $match: {
+      studentCount: { $gt: 15 }
+    }
+  }
+])
+
+// Question Number: 6
+//Find the number of users who are absent and task is not submitted  between 15 oct-2020 and 31-oct-2020
+  db.attendance.find({isPresent:true})
+  db.tasks.find({submittedDate:{$gte:'2020-10-15', $lte:'2020-10-30'}})
+
