@@ -1,0 +1,154 @@
+[{
+  "_id": {
+    "$oid": "680a33e05070528c41d237f1"
+  },
+  "title": "HTML Day 1 - Introduction to HTML",
+  "startDate": "2020-08-17"
+},
+{
+  "_id": {
+    "$oid": "680a33e05070528c41d237f2"
+  },
+  "title": "HTML Day 2 - HTML Elements and Structure",
+  "startDate": "2020-08-19"
+},
+{
+  "_id": {
+    "$oid": "680a33e05070528c41d237f3"
+  },
+  "title": "HTML Day 3 - Formatting and Semantics",
+  "startDate": "2020-08-21"
+},
+{
+  "_id": {
+    "$oid": "680a33e05070528c41d237f4"
+  },
+  "title": "CSS Day 1 - Introduction to CSS",
+  "startDate": "2020-08-24"
+},
+{
+  "_id": {
+    "$oid": "680a33e05070528c41d237f5"
+  },
+  "title": "CSS Day 2 - Selectors and Properties",
+  "startDate": "2020-08-26"
+},
+{
+  "_id": {
+    "$oid": "680a33e05070528c41d237f6"
+  },
+  "title": "CSS Day 3 - Box Model and Layouts",
+  "startDate": "2020-08-28"
+},
+{
+  "_id": {
+    "$oid": "680a33e05070528c41d237f7"
+  },
+  "title": "CSS Day 4 - Flexbox and Grid",
+  "startDate": "2020-09-01"
+},
+{
+  "_id": {
+    "$oid": "680a33e05070528c41d237f8"
+  },
+  "title": "JavaScript Day 1 - Introduction to JS",
+  "startDate": "2020-09-04"
+},
+{
+  "_id": {
+    "$oid": "680a33e05070528c41d237f9"
+  },
+  "title": "JavaScript Day 2 - Variables and Data Types",
+  "startDate": "2020-09-07"
+},
+{
+  "_id": {
+    "$oid": "680a33e05070528c41d237fa"
+  },
+  "title": "JavaScript Day 3 - Functions and Scope",
+  "startDate": "2020-09-09"
+},
+{
+  "_id": {
+    "$oid": "680a33e05070528c41d237fb"
+  },
+  "title": "JavaScript Day 4 - Events and DOM Manipulation",
+  "startDate": "2020-09-11"
+},
+{
+  "_id": {
+    "$oid": "680a33e05070528c41d237fc"
+  },
+  "title": "JavaScript Day 5 - Arrays and Loops",
+  "startDate": "2020-09-14"
+},
+{
+  "_id": {
+    "$oid": "680a33e05070528c41d237fd"
+  },
+  "title": "React Day 1 - Getting Started with React",
+  "startDate": "2020-09-17"
+},
+{
+  "_id": {
+    "$oid": "680a33e05070528c41d237fe"
+  },
+  "title": "React Day 2 - Components and Props",
+  "startDate": "2020-09-20"
+},
+{
+  "_id": {
+    "$oid": "680a33e05070528c41d237ff"
+  },
+  "title": "React Day 3 - State and Lifecycle",
+  "startDate": "2020-09-23"
+},
+{
+  "_id": {
+    "$oid": "680a33e05070528c41d23800"
+  },
+  "title": "React Day 4 - Handling Events",
+  "startDate": "2020-09-26"
+},
+{
+  "_id": {
+    "$oid": "680a33e05070528c41d23801"
+  },
+  "title": "React Day 5 - Conditional Rendering",
+  "startDate": "2020-09-30"
+},
+{
+  "_id": {
+    "$oid": "680a33e05070528c41d23802"
+  },
+  "title": "React Day 6 - Lists and Keys",
+  "startDate": "2020-10-04"
+},
+{
+  "_id": {
+    "$oid": "680a33e05070528c41d23803"
+  },
+  "title": "React Day 7 - Forms in React",
+  "startDate": "2020-10-08"
+},
+{
+  "_id": {
+    "$oid": "680a33e05070528c41d23804"
+  },
+  "title": "React Day 8 - Lifting State Up",
+  "startDate": "2020-10-12"
+},
+{
+  "_id": {
+    "$oid": "680a33e05070528c41d23805"
+  },
+  "title": "React Day 9 - React Hooks Introduction",
+  "startDate": "2020-10-16"
+},
+{
+  "_id": {
+    "$oid": "680a33e05070528c41d23806"
+  },
+  "title": "React Day 10 - Final Project and Review",
+  "startDate": "2020-10-20"
+}]

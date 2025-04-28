@@ -1,0 +1,80 @@
+[{
+  "_id": {
+    "$oid": "680a3a0b1c3be24e70c02484"
+  },
+  "title": "HTML Task - Create a Personal Webpage",
+  "assignedDate": "2020-08-17",
+  "submittedDate": "2020-08-19"
+},
+{
+  "_id": {
+    "$oid": "680a3a0b1c3be24e70c02485"
+  },
+  "title": "CSS Task - Style the Webpage with Flexbox",
+  "assignedDate": "2020-08-22",
+  "submittedDate": "2020-08-24"
+},
+{
+  "_id": {
+    "$oid": "680a3a0b1c3be24e70c02486"
+  },
+  "title": "JavaScript Task - Simple Calculator",
+  "assignedDate": "2020-08-29",
+  "submittedDate": "2020-09-01"
+},
+{
+  "_id": {
+    "$oid": "680a3a0b1c3be24e70c02487"
+  },
+  "title": "HTML Task - Create a Form Page",
+  "assignedDate": "2020-09-05",
+  "submittedDate": "2020-09-07"
+},
+{
+  "_id": {
+    "$oid": "680a3a0b1c3be24e70c02488"
+  },
+  "title": "CSS Task - Responsive Layout with Grid",
+  "assignedDate": "2020-09-11",
+  "submittedDate": "2020-09-13"
+},
+{
+  "_id": {
+    "$oid": "680a3a0b1c3be24e70c02489"
+  },
+  "title": "JavaScript Task - DOM Manipulation",
+  "assignedDate": "2020-09-18",
+  "submittedDate": "2020-09-20"
+},
+{
+  "_id": {
+    "$oid": "680a3a0b1c3be24e70c0248a"
+  },
+  "title": "React Task - Build a Todo App",
+  "assignedDate": "2020-09-25",
+  "submittedDate": "2020-09-28"
+},
+{
+  "_id": {
+    "$oid": "680a3a0b1c3be24e70c0248b"
+  },
+  "title": "React Task - Create Components and Props Demo",
+  "assignedDate": "2020-10-02",
+  "submittedDate": "2020-10-05"
+},
+{
+  "_id": {
+    "$oid": "680a3a0b1c3be24e70c0248c"
+  },
+  "title": "JavaScript Task - Fetch API and Display Data",
+  "assignedDate": "2020-10-10",
+  "submittedDate": "2020-10-12"
+},
+{
+  "_id": {
+    "$oid": "680a3a0b1c3be24e70c0248d"
+  },
+  "title": "React Task - UseState and Event Handling",
+  "assignedDate": "2020-10-20",
+  "submittedDate": "2020-10-23"
+}]
